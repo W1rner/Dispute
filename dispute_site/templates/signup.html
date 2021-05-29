@@ -1,0 +1,25 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/reglogstyle.css' %}" >
+
+
+<form method="POST" action="/account/signup/">
+          {% csrf_token %}
+          <div class="container">
+            <h1>Регистрация</h1>
+            <p>Пожалуйста, заполните форму для создания аккаунта</p>
+            {% for field in form.visible_fields %}
+            <p>{{field}} </p>
+            {% endfor %}
+            {% if messages %}
+            {% for message in messages %}
+            <p class="text-white"> {{ message }} </p>
+            {% endfor %}
+            {% endif %}
+            <input type="submit" value="Зарегистрироваться" class="registerbtn">
+            <br>
+          </div>
+          <div class="container signin">
+            <p>Уже есть аккаунт? <a href="/account/login/">Войти</a>.</p>
+            <a href="/" class="text-white"> Вернуться на главную </a>
+          </div>
+        </form>

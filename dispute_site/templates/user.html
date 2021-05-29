@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <title>disput</title>
+        <link rel="stylesheet" href="{% static "css/header_footer.css" %}">
+        <link rel="stylesheet" href="{% static "css/user.css" %}">
+        <meta name="viewport" content="width=device-width">
+    </head>
+    {% include 'header.html' %}
+
+          <p class="popular-name">ИНФОРМАЦИЯ </p>
+          <main class="grid_cont">
+              <div class="grid_cont_first">
+                 <form class="form_img"></form>
+                  <button class="edit"><a href="{% url 'edit_profile' %}">редактировать</a></button>
+                  <div class="pr"><a href="{% url 'premium' %}" style="text-decoration:none; ">PREMIUM</a></div>
+              </div>
+              <div class="grid_cont_second">
+                  <div class="user_name">{{ user.username }}</div>
+                  <!-- <div class="tag">@tag</div> -->
+                  <div class="mail">{{ user.email }}</div>
+                  <div class="ment_age">Ментальный возраст</div>
+                  <div class="age">Возраст</div>
+                  <button class="logout"><a href="{% url 'logout' %}">Log out</a></button>
+              </div>
+              <div class="grid_cont_third">
+                  <div>
+                      <div class="sq">
+                          <div class="til">Свершения</div>
+                          <div class="ach"></div>
+                          <div class="ach"></div>
+                          <div class="ach"></div>
+                          <div class="ach"></div>
+                          <div class="ach"></div>
+                          <div class="ach"></div>
+                          <div class="ach"></div>
+                          <div class="ach"></div>
+                          <div class="ach"></div>
+                      </div>
+                  </div>
+                  <button class="comm">мои комментарии</button>
+                  <button class="quest">мои вопросы</button>
+
+              </div>
+
+      </main>

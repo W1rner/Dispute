@@ -1,0 +1,201 @@
+@font-face {
+    font-family:Comfortaa;
+    src:url(comfortaa/comfortaa.ttf)
+}
+
+body { overflow-x: hidden; }
+
+.main{
+    width:90%;
+    border-radius: 15px;
+    background-color: #1f2b6c;
+    margin: 10px auto;
+    padding: 15px 0px;
+}
+
+.text {
+    margin: 0px 40px;
+    color: #ffffff;
+    font-family: Comfortaa;
+    font-size: 30px;
+    font-weight: 300;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: normal;
+    text-align: justify;
+    background-color: transparent;
+}
+
+#header_main, .theory{
+    width: 80%;
+    margin: 10px auto;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 15px;
+    background-color: #ffffff;
+    padding: 0px 20px;
+}
+
+
+.btn{
+    padding: 10px;
+    margin: 0px 5px;
+    background: #555555;
+    color: #ffffff;
+    font-family: Comfortaa;
+    font-size: 25px;
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: -0.33px;
+    line-height: normal;
+    border-radius: 16px;
+    cursor: pointer;
+    border: none;
+}
+
+.active-btn, .btn:hover {
+    background-color: #777777;
+}
+
+.btn-comm-theory {
+    padding: 10px 15px;
+    margin: 0px 15px;
+}
+
+.btn-comm-theory {
+    cursor: pointer;
+    border: none;
+}
+
+
+.btn-for-theory {
+    background: #e2dedc;
+    color: #333333;
+}
+
+
+.counter{
+    display:block;
+    height: 60px;
+    width: 55px;
+    margin: 0 15px;
+    color: #000000;
+    font-family: Comfortaa;
+    font-size: 25px;
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: -0.33px;
+    line-height: center;
+    text-align: center;
+    border-radius: 20px;
+    background-color: #e2dedc;
+    border: none;
+}
+
+#block-name, .comm {
+    margin: 10px 15px;
+    flex-grow: 4;
+    color: #000000;
+    font-family: Comfortaa;
+    font-size: 40px;
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: normal;
+    text-align: left;
+}
+
+
+.quest{
+    width: 80%;
+    margin: 0px auto;
+    margin-bottom: 20px;
+    background-color: #ffffff;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    color: #000000;
+    font-family: Comfortaa;
+    font-size: 40px;
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: normal;
+    text-align: center;
+    border-radius: 15px;
+}
+
+.for-comm {
+    font-size: 20px;
+}
+
+.input-comm-div{
+    width: 80%;
+    margin-top: 17px;
+    height: 120px;
+    border-radius: 20px;
+    background-color: #ffffff;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+input[type=text]{
+    width: 80%;
+    min-height: 70px;
+    height: scroll-height;
+    border:none;
+    padding: 10px 20px;
+    background: #f1f1f1;
+    color: #000000;
+    font-family: Comfortaa;
+    font-size: 30px;
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: -0.33px;
+    line-height: normal;
+    border-radius: 20px;
+    margin: 20px 0px;
+}
+
+*:focus {
+    outline: none;
+}
+
+.send-btn{
+/* width: 19.5%; */
+    cursor: pointer;
+    margin-left: 8%;
+    height: 66px;
+    grid-column: 8/10;
+    color: #000000;
+    font-family: Comfortaa;
+    font-size: 24px;
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: -0.33px;
+    line-height: normal;
+    text-align: center;
+    /* margin: 0px auto; */
+    border-radius: 20px;
+    border: none;
+    background-color: #a7bee7;
+}
+
+.btn, .btn-comm-theory, .send-btn {
+    cursor: pointer;
+    border: none;
+    transition: 0.4s
+}
+
+.comm_sh, theory_sh{
+    width:90%;
+    border-radius: 15px;
+    background-color: #1f2b6c;
+    margin: 10px auto;
+    padding: 15px 0px;
+}

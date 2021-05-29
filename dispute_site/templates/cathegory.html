@@ -1,0 +1,50 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <title>disput</title>
+        <link rel="stylesheet" href="{% static "css/header_footer.css" %}">
+        <link rel="stylesheet" href="{% static "css/cathegory.css" %}">
+        <meta name="viewport" content="width=device-width">
+    </head>
+
+{% include 'header.html' %}
+        <div class="grid_cont_title">
+            <p class="popular-name">КАТЕГОРИИ</p>
+            <input type="text" placeholder="Поиск.." id="myInput" onkeyup="filterFunction()">
+       </div>
+        <main class="grid_cont">
+
+
+                <div class="dropdown">
+                  <button onclick="chpok('them')" class="dropbtn"> Темы</button>
+                  <div id="them" class="dropdown-content" style="display: none;">
+                    <a href="#">Вселенная</a>
+                    <a href="#">Психология</a>
+                    <a href="#">История</a>
+                  </div>
+                </div>\
+
+                <div class="dropdown">
+                  <button onclick="chpok('auth')" class="dropbtn"> Авторы</button>
+                  <div id="auth" class="dropdown-content" style="display: none;">
+                    {% for user in users %}
+                      <a href="/users/user?id={{user.id}}">{{ user.username }}  </a>
+                    {% endfor %}
+                  </div>
+                </div>
+
+            <div style="height: 92px; width:100%;"></div>
+        </main>
+
+<script>
+
+function chpok(id){
+    elem = document.getElementById(id); //находим блок div по его id, который передали в функцию
+    state = elem.style.display; //смотрим, включен ли сейчас элемент
+    if (state =='') elem.style.display='none'; //если включен, то выключаем
+    else elem.style.display=''; //иначе - включаем
+}
+</script>

@@ -1,0 +1,41 @@
+{% load static %}
+<body style="overflow-x: hidden">
+
+
+<header>
+  <div class="head"><p><a href="/popular/" class="pp">DISPUT</a></p>
+    {% if user.is_authenticated %}
+    <a href="/account/" class="img-account">
+    {% else %}
+    <a href="/account/login/" class="img-account">
+    {% endif %}
+      <img src="{% static 'img/account.png' %}"></a>
+    </div>
+    <ul class="menu">
+        <li class="menu_btn">
+            <a href="/popular/">популярное</a>
+        </li>
+        <li class="menu_btn">
+            <a href="/cathegory/">категории</a>
+        </li>
+        {% if user.is_authenticated %}
+        <li class="menu_btn">
+            <a href="/recomended/">рекомендации</a>
+        </li>
+        {% endif %}
+        <!-- <li class="menu_btn">
+            <a>диспуты</a>
+        </li> -->
+        {% if user.is_authenticated %}
+        <li class="menu_btn">
+            <a>подписки</a>
+        </li>
+        {% endif %}
+        <li class="menu_btn">
+            <a href="/questions/">все вопросы</a>
+        </li>
+        <li class="menu_btn">
+            <a href="">справка</a>
+        </li>
+    </ul>
+</header>

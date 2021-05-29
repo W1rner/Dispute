@@ -1,0 +1,106 @@
+
+.popular-name{/* Style for "ПОПУЛЯРНОЕ" */
+width: 100%;
+height: 74px;
+text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+color: #000000;
+font-family: Comfortaa;
+font-size: 48px;
+font-weight: 700;
+font-style: normal;
+letter-spacing: -0.33px;
+line-height: normal;
+text-align: center;
+grid-column: 2/3;
+justify-self: center;
+  align-self: center;}
+
+.dropbtn {
+    
+    color: #000000;
+    font-family: Comfortaa;
+    font-size: 36px;
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: -0.33px;
+    line-height: normal;
+    text-align: center;
+    background-color: #F3D89F;
+    padding: 16px;
+    border: none;
+    cursor: pointer;
+     width: 100%;
+    height: 84px;
+    border-radius: 20px;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+    text-decoration: underline;
+}
+
+#myInput {
+  box-sizing: border-box;
+  background-color: #fefaed; 
+  background-position: 14px 12px;
+  background-repeat: no-repeat;
+  font-size: 20px;
+  padding: 14px 20px 12px 45px;
+  border: none;
+  justify-self: center;
+  align-self: center;
+     width: 87%;
+}
+
+#myInput:focus {text-decoration: underline;
+border: none;}
+#myInput:hover {border: none;}
+
+
+.dropdown-content {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  width: 100%;
+  grid-gap: 10%;
+    margin-top: 10%;
+}
+
+
+.dropdown-content a {
+  text-decoration: none;
+  background-color: #C7BAB1;
+  height: 59px;
+  border-radius: 20px;
+  width: 100%;
+  color: #000000;
+  font-family: Comfortaa;
+  font-size: 26px;
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: -0.33px;
+  line-height: normal;
+  text-align: center;
+  padding-top:25px; 
+}
+
+.dropdown a:hover {background-color: #ddd;}
+.show {display: block;}
+
+
+.grid_cont{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-content: center;
+    justify-content: center;
+    width: 80%;
+    margin: 0px auto;
+    grid-gap: 10%;
+    
+}
+
+.grid_cont_title{
+    display: grid;
+     grid-template-columns: repeat(3, 1fr);
+    width: 80%;
+    margin: 0px auto;
+    
+}

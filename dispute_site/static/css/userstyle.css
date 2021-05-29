@@ -1,0 +1,45 @@
+@font-face { 
+    font-family:Comfortaa;
+    src:url(comfortaa/comfortaa.ttf)
+}
+
+main{
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+
+
+button{
+     background-color: #1F2B6C;
+  color: white;
+    border-radius: 20px;
+  padding: 16px 20px;
+  margin: auto;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  opacity: 0.9;
+  font-family: Comfortaa;
+}
+
+.stats{
+    width: 302px;
+    text-align: center;
+    align-items: center;
+    margin: auto;
+    height: 200px;
+}
+
+.followers{
+    float: left;
+}
+
+.quantity{
+    float: right;
+}
+
+.bet{
+    width: 10px;
+    background-color: black;
+}

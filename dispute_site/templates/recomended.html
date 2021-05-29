@@ -1,0 +1,76 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <title>disput</title>
+                <link rel="stylesheet" href="{% static "css/header_footer.css" %}">
+        <link rel="stylesheet" href="{% static "css/popularstyle.css" %}">
+        <meta name="viewport" content="width=device-width">
+    </head>
+    {% include 'header.html' %}
+        {% if user.is_authenticated %}
+		</header>
+        <div class="first">
+            <p class="popular-name">РЕКОМЕНДАЦИИ</p>
+             <input type="text" placeholder="Поиск.." id="myInput" onkeyup="filterFunction()">
+        </div>
+        <main class="main">
+                <div class="question">
+                    <div class="que">
+                        <p class="name_question">Вопрос</p>
+                        <div class="arrow-top">
+                        </div>
+                        <div class="arrow-bottom">
+                        </div>
+                        <div class="counter" id="count">+2</div>
+                        <button class="podrobnee">подробнее</button>
+
+                    </div>
+
+                </div>
+                <div class='question-com'>
+                    <div class="comm">комментарий</div>
+                    <div class="vs">VS</div>
+                </div>
+        </main>
+        <p></p>
+        <main class="main">
+                <div class="question">
+                    <div class="que">
+                        <p class="name_question">Вопрос</p>
+                        <div class="arrow-top">
+                        </div>
+                        <div class="arrow-bottom">
+                        </div>
+                        <div class="counter" id="count">+1</div>
+                        <button class="podrobnee">подробнее</button>
+
+                    </div>
+
+                </div>
+                <div class='question-com'>
+                    <div class="comm">комментарий</div>
+                    <div class="vs">VS</div>
+                </div>
+        </main>
+
+
+        <script>
+function chpok(id){
+    elem = document.getElementById(id); //находим блок div по его id, который передали в функцию
+    state = elem.style.display; //смотрим, включен ли сейчас элемент
+    if (state =='') elem.style.display='none'; //если включен, то выключаем
+    else elem.style.display=''; //иначе - включаем
+}
+</script>
+
+
+    </body>
+    {% else %}
+    <p> Forbidden </p>
+    <p> 403 </p>
+
+    {% endif %}
+</html>

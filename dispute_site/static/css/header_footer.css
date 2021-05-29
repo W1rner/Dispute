@@ -1,0 +1,119 @@
+@font-face {
+    font-family:Comfortaa;
+    src:url(comfortaa/comfortaa.ttf)
+
+}
+@media (max-width: 1032px){
+    .menu_btn{
+    font-size: 22px;
+    }
+}
+@media (max-width: 880px){
+    .menu_btn{
+    font-size: 20px;
+    height:51px;
+    }
+    .menu{
+    height:51px;
+    }
+}
+@media (max-width: 880px){
+    .menu_btn{
+    font-size: 18px;
+    height:46px;
+    }
+    .menu{
+    height:46px;
+    }
+}
+
+
+.head{
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    width: 100%;
+    border: 1px solid #000000;
+    background-color: #1f2b6c;
+    margin:0px auto;
+            }
+.head p{
+    color: #ffffff;
+    font-family: Comfortaa;
+    font-size: 64px;
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: -0.33px;
+    line-height: normal;
+    text-align: center;
+    text-transform: uppercase;
+     margin:0px auto;
+    grid-column: 4/6;
+}
+.head a{
+    grid-column: 8/9;
+
+}
+.head a img{height: 78px;
+    width: 78px;}
+.menu{
+        width: 100%;
+        height: 61px;
+        background-color: #e2dedc;
+        margin: 0px;
+        padding: 0px
+        }
+.menu_btn{
+        padding: 0.7em  0;
+        display:inline-block;
+       width: 16.25%;
+        height: 61px;
+        color: #000000;
+        font-family: Comfortaa;
+        font-size: 24px;
+        font-weight: 700;
+        font-style: normal;
+        letter-spacing: -0.33 px;
+        line-height: normal;
+        text-align: center;
+        }
+.menu-N{
+        width: 100%;
+        height: 61px;
+        background-color: #e2dedc;
+        margin: 0px;
+        padding: 0px
+        }
+.menu_btn-N{
+        padding: 0.7em  0;
+        display:inline-block;
+        width: 20.25%;
+        height: 61px;
+        color: #000000;
+        font-family: Comfortaa;
+        font-size: 24px;
+        font-weight: 700;
+        font-style: normal;
+        letter-spacing: -0.33 px;
+        line-height: normal;
+        text-align: center;}
+
+body{
+    margin: 0px auto;
+ background-color: #fefaed;
+min-height: 100vh;
+
+}
+
+
+
+.menu_btn a{
+    color: black;
+    text-decoration: none;
+}
+
+.pp{text-decoration: none;
+color: white;}
+
+
+
+

@@ -1,0 +1,83 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <title>disput</title>
+        <link rel="stylesheet" href="{% static "css/header_footer.css" %}">
+        <link rel="stylesheet" href="{% static "css/questions.css" %}">
+        <meta name="viewport" content="width=device-width">
+    </head>
+
+{% include 'header.html' %}
+        <div class="first">
+             <button name="cr_btn" class="bt_cr"> Create question </button>
+             <p class="popular-name">ВСЕ ВОПРОСЫ</p>
+             <input type="text" placeholder="Поиск.." id="myInput" onkeyup="filterFunction()">
+            <button onclick="chpok('fil')" class="filtr"  ><img src="{% static 'img/f.png' %}"></button>
+        </div>
+        <div class="natural_filtr" id="fil" style="display:none;">
+            <div class="last_hour">последний час</div>
+            <div class="last_24hour">последние 24 часа</div>
+            <div class="last_month">последний месяц</div>
+            <div class="all_time">все время</div>
+        </div>
+
+
+
+
+
+        {% for quest in questions %}
+
+        <main class="main">
+                  <div class="question">
+                      <div class="que">
+                          <p class="name_question" style="overflow: hidden;">{{ quest.header }}</p>
+                            <input type="button" onclick="up()" value="+" style="width:50%; height:50%; margin:auto;">
+                            <input type="button" onclick="down()" value="-" style="width:50%; height:50%; margin:auto;">
+                          <div class="counter" id="tcount" value="{{ quest.rating }}">{{ quest.rating }}</div>
+                          <button class="podrobnee"><a href="/questions/quest?id={{quest.id}}" style="color:black;">подробнее</a></button>
+                      </div>
+                  </div>
+                  <div class='question-com'>
+                      <div class="comm">{{ quest.text }}</div>
+                      <!-- <div class="vs">VS</div> -->
+
+                  </div>
+          </main>
+          <p></p>
+
+        {% endfor %}
+
+
+
+
+    <div style="height: 92px; width:100%;"></div>
+        <script>
+            function chpok(id){
+                elem = document.getElementById(id); //находим блок div по его id, который передали в функцию
+                state = elem.style.display; //смотрим, включен ли сейчас элемент
+                if (state =='') elem.style.display='none'; //если включен, то выключаем
+                else elem.style.display=''; //иначе - включаем
+            }
+            document.getElementsByName("cr_btn")[0].onclick = function(){window.location.href='/createquestion/'}
+
+
+
+
+
+
+
+            let pole = document.getElementById("tcount");
+
+
+            arrow-top.addEventListener("click", function(){
+                tcount.value = parseInt(tcount.value) + 1;});
+
+            arrow-bottom.addEventListener("click", function(){
+                if(parseInt(tcount.value) > 1){
+                    tcount.value = parseInt(tcount.value) - 1;
+                }});
+
+</script>

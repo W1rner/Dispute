@@ -1,0 +1,50 @@
+@font-face { 
+    font-family:Comfortaa;
+    src:url(comfortaa/comfortaa.ttf)
+}
+
+main{
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+body{
+    background-color: #fefaed;
+}
+
+.sec1{
+    display: inline-block;
+    display: flex;
+    flex-direction: row;
+}
+
+.smalldiv{
+    background-color: #1f2b6c;
+    color: white;
+    font-family: Comfortaa;
+    border-radius: 20px;
+    padding: 20px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding-left: 20px;
+    width: 50%;
+}
+
+.bigdiv{
+    background-color: #1f2b6c;
+    color: white;
+    font-family: Comfortaa;
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 50px;
+}
+
+.border{
+    width: 20px;
+    opacity: 0%;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+}

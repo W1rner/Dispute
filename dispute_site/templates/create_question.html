@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <title>disput</title>
+        <link rel="stylesheet" href="{% static "css/header_footer.css" %}">
+        <link rel="stylesheet" href="{% static "css/create_qwestion.css" %}">
+        <meta name="viewport" content="width=device-width">
+    </head>
+    <body>
+    {% include 'header.html' %}
+    <p></p>
+        <form method="POST">
+        {% csrf_token %}
+        <div>
+            <div class="main-qwestion">{{form.as_p}}</div>
+        </div>
+        <input type="submit" value="Дискутировать" class="send-btn">
+
+    </form>
+    <p></p>
+    </body>
+</html>

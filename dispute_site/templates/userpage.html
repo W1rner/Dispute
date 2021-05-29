@@ -1,0 +1,119 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8">
+        <title>Профиль</title>
+
+        <link rel="stylesheet" href="{% static "css/header_footer.css" %}">
+        <link rel="stylesheet" href="{% static "css/userstyle.css" %}">
+        <style type="text/css">
+            @font-face {
+                font-family:Comfortaa;
+                src:url(comfortaa/comfortaa.ttf)
+
+            }
+
+            body{
+                margin: 0px;
+                background-color: #FCFCEE;
+                font-family: Comfortaa;
+            }
+
+            .head{
+            width: 100%;
+            height: 99px;
+            padding-top: 17.5px;
+            border: 1px solid #000000;
+            background-color: #1f2b6c;
+            color: #ffffff;
+            font-family: Comfortaa;
+            font-size: 64px;
+            font-weight: 700;
+            font-style: normal;
+            letter-spacing: -0.33px;
+            line-height: normal;
+            text-align: center;
+            text-transform: uppercase;}
+
+
+            .menu{
+            width: 100%;
+            height: 61px;
+            background-color: #e2dedc;
+            margin: 0px;
+            padding: 0px
+            }
+
+            .menu_btn{
+            position: relative;
+            padding: 0.7em  0;
+            display:inline-block;
+            width: 16.25%;
+            height: 61px;
+            color: #000000;
+            font-family: Comfortaa;
+            font-size: 24px;
+            font-weight: 700;
+            font-style: normal;
+            letter-spacing: -0.33 px;
+            line-height: normal;
+            text-align: center;
+            }
+  </style>
+    </head>
+    <body>
+        {% include 'header.html' %}
+        <div class='headimg'></div>
+        <main>
+            <div>
+            <div >
+            <form action="" method="get">
+    <h2 id="Username" type="text" name="name_field" value="Username">{{ username }}
+</h2></form>
+
+                <p><strong>Last login: </strong><form action="" method="get">
+    <p><strong id="mage" type="text" name="mage_field" value="mage"> {{ last_login }}
+</strong></p></form>
+                <p><strong>Ментальный возраст: </strong><form action="" method="get">
+    <p><strong id="mage" type="text" name="mage_field" value="mage">None
+</strong></p></form>
+            <p><strong>Возраст: </strong><form action="" method="get">
+    <p><strong id="age" type="text" name="age_field" value="age">None
+</strong></p></form>
+
+            </div>
+            <div class="userpic">
+                <img src="">
+            </div>
+            <div class="stats">
+            <div class="followers">
+            <h2><form action="" method="get">
+    <p><strong id="followers" type="text" name="followers_field" value="followers">None
+</strong></p></form></h2>
+            <p><small>Последователей</small></p>
+            <button class="btn">Подписатся</button>
+            </div>
+            <div class="quantity">
+            <h2><form action="" method="get">
+    <p><strong id="questions" type="text" name="questions_field" value="questions">None
+</strong></p></form></h2>
+            <p><small>Вопросов</small></p>
+            </div>
+            <div class="quantity">
+            <h2><form action="" method="get">
+    <p><strong id="teories" type="text" name="teories_field" value="teories">None
+</strong></p></form></h2>
+            <p><small>Теорий</small></p>
+            </div>
+
+            </div>
+            </div>
+        </main>
+        <main>
+        <p>
+            </p>
+        </main>
+
+    </body>
+</html>
